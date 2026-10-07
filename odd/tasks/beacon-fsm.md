@@ -30,6 +30,7 @@ deliverable item in the brief must be produced and consistent with the others.
   next-state and output logic (`informe/01-diseno-fsm.md`).
   Route: inline (single file). Evidence: equations verified by exhaustive
   simulation of every specified transition (script, all OK).
+  Commit: 0c1a34a. Review assessment: passive (non_executable_only), no review due.
 - [ ] T2 — Timing diagram, typical entry + exit without reversals.
 - [ ] T3 — SimulIDE schematic and `.simu` file (0.4.14-SR4).
 - [ ] T4 — Report assembly and video script (< 3 min).
