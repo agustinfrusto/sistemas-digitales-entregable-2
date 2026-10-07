@@ -9,36 +9,14 @@
 | CLK | Entrada | Reloj del sistema. |
 | E (ENABLE) | Salida | 1 = balizas parpadeando, 0 = balizas apagadas. |
 
-## 1. Diagrama de estado/salida
+## Diagrama de estado/salida
 
 Máquina de Moore: la salida E depende solo del estado actual. La flecha de
 reset no se dibuja como transición sincrónica porque S3 actúa directamente
 sobre el RST asíncrono de los flip-flops y lleva la máquina a q0 en cualquier
 estado.
 
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> q0 : RST (S3 = 1)
-    q0 : q0 / E=0
-    q1 : q1 / E=0
-    q2 : q2 / E=0
-    q3 : q3 / E=0
-    q4 : q4 / E=1
-
-    q0 --> q0 : 00
-    q0 --> q1 : 10
-    q1 --> q1 : 10
-    q1 --> q2 : 11
-    q1 --> q0 : 00 (retroceso)
-    q2 --> q2 : 11
-    q2 --> q3 : 01
-    q2 --> q1 : 10 (retroceso)
-    q3 --> q3 : 01
-    q3 --> q4 : 00
-    q3 --> q2 : 11 (retroceso)
-    q4 --> q4 : XX
-```
+![Diagrama de estado/salida](figuras/diagrama-estados.svg)
 
 Las etiquetas de las transiciones son los valores de S1S2.
 
@@ -67,7 +45,7 @@ Las etiquetas de las transiciones son los valores de S1S2.
   Igualmente se fija q4 → q4 para cualquier entrada, de modo que una lectura
   espuria no apague las balizas.
 
-## 2. Tabla de estado/salida
+## Tabla de estado/salida
 
 | Estado actual | S1S2 = 00 | S1S2 = 01 | S1S2 = 11 | S1S2 = 10 | E |
 |---|---|---|---|---|---|
@@ -77,7 +55,7 @@ Las etiquetas de las transiciones son los valores de S1S2.
 | q3 | q4 | q3 | q2 | X | 0 |
 | q4 | q4 | q4 | q4 | q4 | 1 |
 
-## 3. Asignación de codificación de los estados
+## Asignación de codificación de los estados
 
 Con 5 estados se necesitan k = ⌈log₂ 5⌉ = 3 bits, es decir, 3 flip-flops D
 (Q2 Q1 Q0). Los códigos 101, 110 y 111 no se usan.
@@ -100,7 +78,7 @@ Con 5 estados se necesitan k = ⌈log₂ 5⌉ = 3 bits, es decir, 3 flip-flops D
 - Se compararon las 840 asignaciones posibles con q0 = 000 y esta es una de
   las de menor costo (menos compuertas y literales).
 
-## 4. Tabla de estado/salida con codificación asignada
+## Tabla de estado/salida con codificación asignada
 
 | Q2 Q1 Q0 | S1S2 = 00 | S1S2 = 01 | S1S2 = 11 | S1S2 = 10 | E |
 |---|---|---|---|---|---|
@@ -116,7 +94,7 @@ Con 5 estados se necesitan k = ⌈log₂ 5⌉ = 3 bits, es decir, 3 flip-flops D
 Con flip-flops D se cumple Q[n+1] = D[n], así que las columnas de estado
 siguiente son directamente las entradas D2 D1 D0.
 
-## 5. Cálculo de la lógica de estado siguiente
+## Cálculo de la lógica de estado siguiente
 
 Una tabla y un mapa de Karnaugh por cada entrada D. Como hay 5 variables
 (Q2, Q1, Q0, S1, S2), cada mapa se divide en dos mapas de 4 variables: uno para
@@ -195,7 +173,7 @@ Agrupación: en Q2 = 0, las dos columnas de la derecha completas (S1 = 1).
 
 **D0 = Q2'·S1**
 
-## 6. Cálculo de la lógica de salida
+## Cálculo de la lógica de salida
 
 Máquina de Moore: E depende solo de Q2 Q1 Q0.
 

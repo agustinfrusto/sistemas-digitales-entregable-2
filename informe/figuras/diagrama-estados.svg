@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="350" viewBox="0 0 1040 350" font-family="Helvetica, Arial, sans-serif">
+<style>.state{fill:#eef2fb;stroke:#1f3a93;stroke-width:2}.state.active{fill:#fdecea;stroke:#c0392b;stroke-width:2.5}.sname{font-size:18px;font-weight:bold;fill:#111;text-anchor:middle}.sout{font-size:13px;fill:#333;text-anchor:middle}.arrow{fill:none;stroke:#1f3a93;stroke-width:2}.arrow.reset{stroke:#555}.tlabel{font-size:14px;font-weight:bold;fill:#111;text-anchor:middle}.rlabel{font-size:12px;fill:#444;text-anchor:middle}.note{font-size:12px;fill:#444}</style>
+<defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#1f3a93"/></marker><marker id="head-reset" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#555"/></marker></defs>
+<rect width="1040" height="350" fill="#fff"/>
+<line x1="229.6" y1="176" x2="340.4" y2="176" class="arrow" marker-end="url(#head)"/><text x="285.0" y="168" class="tlabel">10</text>
+<line x1="419.6" y1="176" x2="530.4" y2="176" class="arrow" marker-end="url(#head)"/><text x="475.0" y="168" class="tlabel">11</text>
+<line x1="609.6" y1="176" x2="720.4" y2="176" class="arrow" marker-end="url(#head)"/><text x="665.0" y="168" class="tlabel">01</text>
+<line x1="799.6" y1="176" x2="910.4" y2="176" class="arrow" marker-end="url(#head)"/><text x="855.0" y="168" class="tlabel">00</text>
+<path d="M 355.9,224.4 Q 285.0,302 214.1,224.4" class="arrow" marker-end="url(#head)"/><text x="285.0" y="283.2" class="tlabel">00</text>
+<path d="M 545.9,224.4 Q 475.0,302 404.1,224.4" class="arrow" marker-end="url(#head)"/><text x="475.0" y="283.2" class="tlabel">10</text>
+<path d="M 735.9,224.4 Q 665.0,302 594.1,224.4" class="arrow" marker-end="url(#head)"/><text x="665.0" y="283.2" class="tlabel">11</text>
+<path d="M 165.9,155.6 C 148.0,86 232.0,86 214.1,155.6" class="arrow" marker-end="url(#head)"/><text x="190" y="96" class="tlabel" dy="-10">00</text>
+<path d="M 355.9,155.6 C 338.0,86 422.0,86 404.1,155.6" class="arrow" marker-end="url(#head)"/><text x="380" y="96" class="tlabel" dy="-10">10</text>
+<path d="M 545.9,155.6 C 528.0,86 612.0,86 594.1,155.6" class="arrow" marker-end="url(#head)"/><text x="570" y="96" class="tlabel" dy="-10">11</text>
+<path d="M 735.9,155.6 C 718.0,86 802.0,86 784.1,155.6" class="arrow" marker-end="url(#head)"/><text x="760" y="96" class="tlabel" dy="-10">01</text>
+<path d="M 925.9,155.6 C 908.0,86 992.0,86 974.1,155.6" class="arrow" marker-end="url(#head)"/><text x="950" y="96" class="tlabel" dy="-10">XX</text>
+<line x1="20" y1="190" x2="148" y2="190" class="arrow reset" marker-end="url(#head-reset)"/><text x="84.0" y="180" class="rlabel">RST (S3 = 1)</text>
+<circle cx="190" cy="190" r="42" class="state"/><text x="190" y="187" class="sname">q0</text><text x="190" y="207" class="sout">E=0</text>
+<circle cx="380" cy="190" r="42" class="state"/><text x="380" y="187" class="sname">q1</text><text x="380" y="207" class="sout">E=0</text>
+<circle cx="570" cy="190" r="42" class="state"/><text x="570" y="187" class="sname">q2</text><text x="570" y="207" class="sout">E=0</text>
+<circle cx="760" cy="190" r="42" class="state"/><text x="760" y="187" class="sname">q3</text><text x="760" y="207" class="sout">E=0</text>
+<circle cx="950" cy="190" r="42" class="state active"/><text x="950" y="187" class="sname">q4</text><text x="950" y="207" class="sout">E=1</text>
+<text x="520" y="330" class="note" text-anchor="middle">Etiquetas de transición: S1S2. S3 actúa sobre el reset asíncrono de los flip-flops.</text>
+</svg>
