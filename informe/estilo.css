@@ -1,0 +1,68 @@
+@page { size: A4; margin: 2cm; }
+
+html { font-size: 11pt; }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.45;
+  color: #111;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cover */
+header#title-block-header {
+  min-height: 24cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  page-break-after: always;
+  break-after: page;
+}
+h1.title { font-size: 28pt; color: #1f3a93; margin: 0 0 0.4em; border: none; }
+p.subtitle { font-size: 18pt; color: #333; margin: 0 0 2.5em; }
+p.author { font-size: 13pt; margin: 0.3em 0; }
+p.date { font-size: 13pt; color: #444; margin-top: 2em; }
+
+/* Table of contents */
+nav#TOC { page-break-after: always; break-after: page; }
+nav#TOC::before { content: "Contenido"; display: block; font-size: 18pt; font-weight: bold; color: #1f3a93; margin-bottom: 0.8em; }
+nav#TOC > h2 { display: none; }
+nav#TOC ul { list-style: none; padding-left: 1.2em; }
+nav#TOC > ul { padding-left: 0; }
+nav#TOC a { color: #111; text-decoration: none; }
+
+/* Headings */
+h1:not(.title) {
+  font-size: 20pt; color: #1f3a93;
+  border-bottom: 2px solid #1f3a93; padding-bottom: 0.2em;
+  page-break-before: always; break-before: page;
+}
+h2 { font-size: 14pt; color: #1f3a93; margin-top: 1.6em; }
+h3 { font-size: 12pt; color: #222; }
+h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+  margin: 1em 0;
+  font-size: 9.5pt;
+  page-break-inside: avoid; break-inside: avoid;
+}
+th, td { border: 1px solid #777; padding: 4px 7px; text-align: left; overflow-wrap: anywhere; }
+th { background: #eef2fb; }
+tr { page-break-inside: avoid; break-inside: avoid; }
+
+/* Figures */
+figure { margin: 1em 0; text-align: center; page-break-inside: avoid; break-inside: avoid; }
+img { max-width: 100%; height: auto; }
+figcaption { font-size: 9.5pt; color: #444; }
+
+code { font-family: Menlo, Consolas, monospace; font-size: 0.9em; background: #f3f3f3; padding: 0 3px; }
+p, li { orphans: 3; widows: 3; }
+
+html, body { hyphens: manual; -webkit-hyphens: manual; }
