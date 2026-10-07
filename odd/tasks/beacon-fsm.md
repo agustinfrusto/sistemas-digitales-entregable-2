@@ -39,6 +39,7 @@ deliverable item in the brief must be produced and consistent with the others.
   Review assessment: medium, under_budget (no review due; pending in slice).
 - [ ] T3 — SimulIDE schematic and `.simu` file (0.4.14-SR4).
   Owner: user (built by hand); may send the `.simu` for review afterwards.
+  Support: build and test guide in `informe/03-guia-simulide.md`.
 - [ ] T4 — Report assembly and video script (< 3 min).
 
 ## Acceptance criteria
