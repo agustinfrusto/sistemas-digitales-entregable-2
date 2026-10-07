@@ -40,7 +40,20 @@ deliverable item in the brief must be produced and consistent with the others.
 - [ ] T3 — SimulIDE schematic and `.simu` file (0.4.14-SR4).
   Owner: user (built by hand); may send the `.simu` for review afterwards.
   Support: build and test guide in `informe/03-guia-simulide.md`.
-- [ ] T4 — Report assembly and video script (< 3 min).
+- [x] T4a — State diagram as SVG + report PDF pipeline (`informe/generar_pdf.sh`,
+  `informe/Entregable2-SistemasDigitales.pdf`). Route: delegated (Orca worker,
+  writer trigger: 2+ non-trivial files). Commits: 8588e18, 516a0a9.
+  Evidence: PDF A4, 11 pages, pages inspected; builds from any cwd.
+  Review: high risk (shell script) → consent granted → 4 lenses run
+  sequentially → approved, acknowledged (lineage review-9f718ba2afbbf7d5).
+  Advisory (non-blocking) follow-ups: PDF output not checked after Chrome,
+  hardcoded Chrome path, timing-event grid fragility.
+- [ ] T4b — Video script (< 3 min). Deferred by user.
+- [ ] T5 — README + agent instructions so teammates can query the design with
+  any AI agent (CLI/desktop, Windows/macOS), read-only, scoped to FSM logic
+  and circuit construction.
+- [ ] T6 — Two independent verifications (sequential): logic, synthesis
+  steps, and coherence with the brief.
 
 ## Acceptance criteria
 
@@ -60,4 +73,4 @@ deliverable item in the brief must be produced and consistent with the others.
 
 ## Next step
 
-T3 is user-owned. Next agent work: review the `.simu` when provided, or T4.
+T5 — README and agent instructions. Then T6.
