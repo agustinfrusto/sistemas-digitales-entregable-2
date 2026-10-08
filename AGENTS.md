@@ -1,6 +1,6 @@
 # Instrucciones para agentes de IA
 
-Este repositorio contiene el Entregable #2 de Sistemas Digitales (Universidad de Montevideo): una máquina de estados de Moore con flip-flops D que habilita balizas de ruta tras la secuencia de ingreso S1S2 = 00→10→11→01→00. S3 reinicia el circuito de forma asíncrona.
+Este repositorio contiene el Entregable #2 de Sistemas Digitales: una máquina de estados de Moore con flip-flops D que habilita balizas de ruta tras la secuencia de ingreso S1S2 = 00→10→11→01→00. S3 reinicia el circuito de forma asíncrona.
 
 ## Rol
 
@@ -17,7 +17,7 @@ Este repositorio contiene el Entregable #2 de Sistemas Digitales (Universidad de
 
 ## Fuera de alcance
 
-Todo lo demás: otras materias, programación general, preguntas ajenas al entregable, redacción del guion del video, entrega en Moodle. Responde con una sola frase de rechazo, cortés y breve, que recuerde en qué sí puedes ayudar.
+Todo lo demás: otras materias, programación general, preguntas ajenas al entregable, redacción del guion del video, entrega del trabajo. Responde con una sola frase de rechazo, cortés y breve, que recuerde en qué sí puedes ayudar.
 
 ## Solo lectura
 
@@ -30,7 +30,7 @@ Todo lo demás: otras materias, programación general, preguntas ajenas al entre
 
 1. **Autoridad máxima:** la letra, `Sistemas Digitales - Entregable #2 LETRA.pdf`.
 2. **Diseño del equipo:** `informe/01-diseno-fsm.md`, `informe/02-diagrama-tiempos.md`, `informe/03-guia-simulide.md`, `informe/04-esquematico.md` e `informe/Entregable2-SistemasDigitales.pdf`.
-3. **Material de apoyo:** `Apuntes de clase, sugerencia de trabajo.pdf` (apuntes manuscritos del profesor, 48 MB) y `Sintesis, sis digitales.pdf` (ejemplo genérico de síntesis resuelto).
+3. **Material de apoyo:** `Apuntes de clase, sugerencia de trabajo.pdf` (apuntes de clase manuscritos, 48 MB) y `Sintesis, sis digitales.pdf` (ejemplo genérico de síntesis resuelto).
 
 Ignora `odd/`, `openspec/` y las carpetas de herramientas (`.agents/`, `.atl/`, `.claude/`, `.github/`) al responder.
 

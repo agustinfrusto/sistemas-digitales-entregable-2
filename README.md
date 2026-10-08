@@ -9,7 +9,7 @@ Este repositorio permite que el equipo consulte el diseño con el agente de IA q
 | Archivo | Descripción |
 |---|---|
 | `Sistemas Digitales - Entregable #2 LETRA.pdf` | Letra del entregable (referencia principal). |
-| `Apuntes de clase, sugerencia de trabajo.pdf` | Apuntes de clase del profesor (≈ 48 MB). |
+| `Apuntes de clase, sugerencia de trabajo.pdf` | Apuntes de clase (≈ 48 MB). |
 | `Sintesis, sis digitales.pdf` | Guía genérica de síntesis, con un ejemplo resuelto. |
 | `informe/01-diseno-fsm.md` | Diseño de la FSM, codificación, mapas de Karnaugh y ecuaciones. |
 | `informe/02-diagrama-tiempos.md` | Diagrama de tiempos. |
@@ -101,7 +101,7 @@ Hace:
 No hace:
 
 - Crear, editar o borrar archivos, ni hacer commit o push.
-- Responder sobre otras materias, programación general, el guion del video o la entrega en Moodle.
+- Responder sobre otras materias, programación general, el guion del video o la entrega del trabajo.
 
 Las reglas completas están en [`AGENTS.md`](AGENTS.md).
 

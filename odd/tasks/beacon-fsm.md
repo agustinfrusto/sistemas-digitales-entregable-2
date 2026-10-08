@@ -8,14 +8,14 @@ beacons (`ENABLE = 1`) after detecting the entry sequence S1S2 = 00 → 10 → 1
 
 ## Problem / why
 
-Course deliverable (Sistemas Digitales, Universidad de Montevideo). Every
+Course deliverable (Sistemas Digitales). Every
 deliverable item in the brief must be produced and consistent with the others.
 
 ## Scope
 
 - In: synthesis documents (state diagram → equations), timing diagram,
   SimulIDE 0.4.14-SR4 schematic + `.simu`, report assembly, video script.
-- Out: recording the video, uploading to Moodle (user-owned).
+- Out: recording the video, submitting the deliverable (user-owned).
 
 ## Constraints
 
