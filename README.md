@@ -1,6 +1,6 @@
 # Entregable #2 — Control de balizas (Sistemas Digitales)
 
-Proyecto de Sistemas Digitales (Universidad de Montevideo). Se diseña una máquina de estados de Moore con flip-flops D que enciende las balizas de un camino cuando un vehículo completa la secuencia de ingreso S1S2 = 00 → 10 → 11 → 01 → 00. El sensor S3 reinicia el circuito de forma asíncrona.
+Proyecto de Sistemas Digitales. Se diseña una máquina de estados de Moore con flip-flops D que enciende las balizas de un camino cuando un vehículo completa la secuencia de ingreso S1S2 = 00 → 10 → 11 → 01 → 00. El sensor S3 reinicia el circuito de forma asíncrona.
 
 Este repositorio permite que el equipo consulte el diseño con el agente de IA que prefiera. El agente solo responde sobre la lógica del modelo y el armado del circuito en SimulIDE 0.4.14-SR4, y no modifica nada.
 
