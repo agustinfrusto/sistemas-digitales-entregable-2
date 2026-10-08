@@ -49,9 +49,12 @@ deliverable item in the brief must be produced and consistent with the others.
   Advisory (non-blocking) follow-ups: PDF output not checked after Chrome,
   hardcoded Chrome path, timing-event grid fragility.
 - [ ] T4b — Video script (< 3 min). Deferred by user.
-- [ ] T5 — README + agent instructions so teammates can query the design with
+- [x] T5 — README + agent instructions so teammates can query the design with
   any AI agent (CLI/desktop, Windows/macOS), read-only, scoped to FSM logic
-  and circuit construction.
+  and circuit construction. Route: delegated (Orca worker). AGENTS.md is the
+  single source; CLAUDE.md and GEMINI.md import it. Brief and synthesis PDFs
+  committed so agents can read them. Commits: 6f3b8a1, 1d600c3, fa2cff8.
+  Review assessment: medium, under_budget (no review due).
 - [ ] T6 — Two independent verifications (sequential): logic, synthesis
   steps, and coherence with the brief.
 
@@ -73,4 +76,4 @@ deliverable item in the brief must be produced and consistent with the others.
 
 ## Next step
 
-T5 — README and agent instructions. Then T6.
+T6 — two independent verifications, sequential.
