@@ -55,8 +55,17 @@ deliverable item in the brief must be produced and consistent with the others.
   single source; CLAUDE.md and GEMINI.md import it. Brief and synthesis PDFs
   committed so agents can read them. Commits: 6f3b8a1, 1d600c3, fa2cff8.
   Review assessment: medium, under_budget (no review due).
-- [ ] T6 — Two independent verifications (sequential): logic, synthesis
-  steps, and coherence with the brief.
+- [x] T6 — Two independent verifications (sequential): logic, synthesis
+  steps, and coherence with the brief. Route: delegated (2 Orca workers, one
+  after the other). Both: no critical issues; equations re-derived, correct
+  and minimal; all specified transitions simulated without discrepancies.
+  Open findings (pending user decision):
+  - Major (A) / minor (B): X for q0 with S1S2=01 is a single-sensor change;
+    an isolated S2 pulse (00→01→00) would enable E. Justify the assumption
+    or make q0+01 → q0.
+  - Minor: legend for "XX" self-loop; reset-arrow wording vs SVG; "one table
+    and one map per D" wording; E=1 in unused 101; generator-script mention
+    in the PDF.
 
 ## Acceptance criteria
 
@@ -76,4 +85,4 @@ deliverable item in the brief must be produced and consistent with the others.
 
 ## Next step
 
-T6 — two independent verifications, sequential.
+User decision on the q0+01 finding; then apply clarity fixes and rebuild the PDF.
