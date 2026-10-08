@@ -19,7 +19,7 @@ R = 42            # state circle radius
 X0, DX = 190, 190 # first circle x and spacing
 CY = 190          # row y
 WIDTH, HEIGHT = X0 + DX * 4 + 90, 350
-LEGEND = "Etiquetas de transición: S1S2. S3 actúa sobre el reset asíncrono de los flip-flops."
+LEGEND = "Etiquetas de transición: S1S2 (XX = cualquier valor). S3 actúa sobre el reset asíncrono de los flip-flops."
 
 
 def cx(name):

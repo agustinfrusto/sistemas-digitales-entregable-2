@@ -59,7 +59,7 @@ deliverable item in the brief must be produced and consistent with the others.
   steps, and coherence with the brief. Route: delegated (2 Orca workers, one
   after the other). Both: no critical issues; equations re-derived, correct
   and minimal; all specified transitions simulated without discrepancies.
-  Open findings (pending user decision):
+  Findings documented (user: "document it, discuss with the group"):
   - Major (A) / minor (B): X for q0 with S1S2=01 is a single-sensor change;
     an isolated S2 pulse (00→01→00) would enable E. Justify the assumption
     or make q0+01 → q0.
@@ -83,6 +83,13 @@ deliverable item in the brief must be produced and consistent with the others.
 - T1 done. Chosen encoding q0=000, q1=001, q2=011, q3=010, q4=100 (minimum
   cost out of all 840 encodings with q0=000).
 
+- [x] T7 — Document verification findings: q0+01 assumption and open
+  decision in informe/01-diseno-fsm.md and AGENTS.md; clarity fixes (XX legend,
+  reset wording, K-map wording, cost criterion, E=1 in unused states, script
+  mention removed from timing section); PDF rebuilt (12 pages, inspected).
+
 ## Next step
 
-User decision on the q0+01 finding; then apply clarity fixes and rebuild the PDF.
+Group decision on q0 with S1S2 = 01 (keep X as documented assumption, or
+q0+01 → q0 and redo maps/equations). User-owned: SimulIDE schematic, .simu,
+video, members on the cover.

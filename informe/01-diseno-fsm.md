@@ -11,14 +11,16 @@
 
 ## Diagrama de estado/salida
 
-Máquina de Moore: la salida E depende solo del estado actual. La flecha de
-reset no se dibuja como transición sincrónica porque S3 actúa directamente
-sobre el RST asíncrono de los flip-flops y lleva la máquina a q0 en cualquier
-estado.
+Máquina de Moore: la salida E depende solo del estado actual. El reset no se
+dibuja como una transición sincrónica desde cada estado: S3 actúa directamente
+sobre el RST asíncrono de los flip-flops y lleva la máquina a q0 desde
+cualquier estado, sin esperar el reloj. Por eso se representa con una única
+flecha de entrada a q0, rotulada "RST (S3 = 1)".
 
 ![Diagrama de estado/salida](figuras/diagrama-estados.svg)
 
-Las etiquetas de las transiciones son los valores de S1S2.
+Las etiquetas de las transiciones son los valores de S1S2. "XX" significa
+cualquier valor de S1S2.
 
 ### Significado de cada estado
 
@@ -38,8 +40,23 @@ Las etiquetas de las transiciones son los valores de S1S2.
   anterior de la secuencia. Un retroceso de varios pasos es la concatenación
   de retrocesos de un paso, porque los sensores cambian de a uno.
 - **Combinaciones imposibles:** las entradas que no pueden aparecer en un
-  estado (por ejemplo, S1S2 = 11 en q0) se tratan como indiferentes (X) para
-  simplificar la lógica.
+  estado se tratan como indiferentes (X) para simplificar la lógica. Hay
+  cinco:
+  - q0 con 11, q1 con 01, q2 con 00 y q3 con 10 exigirían que S1 y S2
+    cambien a la vez. Los sensores están separados unos centímetros y el
+    reloj los muestrea mucho más rápido de lo que se mueve el vehículo, así
+    que siempre cambia uno por vez.
+  - q0 con 01 es distinto: es un cambio de un solo sensor (solo S2). Se marca
+    X bajo la **hipótesis de que el vehículo siempre ingresa por S1**: estando
+    en reposo, S2 no puede activarse antes que S1. Esta hipótesis coincide con
+    los apuntes de clase, pero la letra no la enuncia explícitamente.
+- **Decisión abierta (q0 con S1S2 = 01):** con las ecuaciones actuales, q0 con
+  01 pasa a q3, y luego 00 lleva a q4. Por lo tanto, un pulso aislado de S2
+  (00 → 01 → 00), por ejemplo una falla del sensor, encendería las balizas sin
+  que se complete la secuencia. Dentro de las hipótesis de la letra no ocurre.
+  La alternativa más robusta es fijar q0 con 01 → q0, a costa de rehacer los
+  mapas de Karnaugh y obtener ecuaciones más largas. Queda pendiente de
+  decisión del grupo.
 - **q4 ignora S1 y S2:** por Hip #1 y Hip #2 (barrera baja) no puede haber
   actividad en los sensores de ingreso mientras el vehículo está en el camino.
   Igualmente se fija q4 → q4 para cualquier entrada, de modo que una lectura
@@ -75,8 +92,9 @@ Con 5 estados se necesitan k = ⌈log₂ 5⌉ = 3 bits, es decir, 3 flip-flops D
 - q0 → q1 → q2 → q3 sigue código Gray: cada avance o retroceso cambia un solo
   bit, igual que los sensores. En estos estados Q1Q0 coincide con S2S1.
 - q4 = 100 hace que la salida dependa de un único bit (E = Q2).
-- Se compararon las 840 asignaciones posibles con q0 = 000 y esta es una de
-  las de menor costo (menos compuertas y literales).
+- Se compararon las 840 asignaciones posibles con q0 = 000, minimizando D2,
+  D1, D0 y E para cada una. Se tomó como costo la suma de literales y de
+  términos de las cuatro funciones, y esta asignación empata en el mínimo.
 
 ## Tabla de estado/salida con codificación asignada
 
@@ -96,7 +114,8 @@ siguiente son directamente las entradas D2 D1 D0.
 
 ## Cálculo de la lógica de estado siguiente
 
-Una tabla y un mapa de Karnaugh por cada entrada D. Como hay 5 variables
+La tabla codificada anterior da, para cada combinación, el valor de D2, D1 y
+D0. A partir de ella se arma un mapa de Karnaugh por cada entrada D. Como hay 5 variables
 (Q2, Q1, Q0, S1, S2), cada mapa se divide en dos mapas de 4 variables: uno para
 Q2 = 0 y otro para Q2 = 1. Filas Q1Q0 y columnas S1S2, ambas en orden Gray.
 
@@ -206,5 +225,8 @@ tabla de estado/salida: todas producen el estado siguiente esperado.
 Comportamiento en los casos indiferentes (no deberían ocurrir):
 
 - Los estados no usados 101, 110 y 111 pasan a q4 en el siguiente flanco de
-  reloj. El reset por S3 lleva cualquier estado a q0.
-- En q3, una entrada S1S2 = 10 lleva al código 101 y luego a q4.
+  reloj. En los tres Q2 = 1, así que E = 1 mientras duran. El reset por S3
+  lleva cualquier estado a q0.
+- En q3, una entrada S1S2 = 10 lleva al código 101 (E = 1) y luego a q4.
+- En q0, una entrada S1S2 = 01 lleva a q3. Ver la decisión abierta en los
+  criterios de diseño.

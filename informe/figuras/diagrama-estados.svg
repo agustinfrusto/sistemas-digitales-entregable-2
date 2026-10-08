@@ -20,5 +20,5 @@
 <circle cx="570" cy="190" r="42" class="state"/><text x="570" y="187" class="sname">q2</text><text x="570" y="207" class="sout">E=0</text>
 <circle cx="760" cy="190" r="42" class="state"/><text x="760" y="187" class="sname">q3</text><text x="760" y="207" class="sout">E=0</text>
 <circle cx="950" cy="190" r="42" class="state active"/><text x="950" y="187" class="sname">q4</text><text x="950" y="207" class="sout">E=1</text>
-<text x="520" y="330" class="note" text-anchor="middle">Etiquetas de transición: S1S2. S3 actúa sobre el reset asíncrono de los flip-flops.</text>
+<text x="520" y="330" class="note" text-anchor="middle">Etiquetas de transición: S1S2 (XX = cualquier valor). S3 actúa sobre el reset asíncrono de los flip-flops.</text>
 </svg>

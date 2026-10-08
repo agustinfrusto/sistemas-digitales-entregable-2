@@ -57,6 +57,7 @@ Si este bloque discrepa de `informe/01-diseno-fsm.md`, la fuente es `informe/01-
 - D0 = Q2'·S1
 - E = Q2
 - S3 → reset asíncrono de los tres flip-flops (lleva a q0 = 000).
+- Decisión abierta del grupo: en q0 la entrada S1S2 = 01 es indiferente (X) bajo la hipótesis de que el vehículo siempre ingresa por S1. Con las ecuaciones actuales, un pulso aislado de S2 (00 → 01 → 00) encendería E. La alternativa es fijar q0 con 01 → q0. Si preguntan por esto, explica ambas opciones (ver "Criterios de diseño" en `informe/01-diseno-fsm.md`) sin elegir por el grupo.
 
 ## Ayuda con el circuito
 

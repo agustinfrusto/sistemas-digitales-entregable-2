@@ -27,6 +27,3 @@ y luego sale activando S3.
   S3 actúa sin esperar el flanco, por eso E cae junto con la subida de S3.
 - **Codificación visible:** mientras se detecta la secuencia, Q1Q0 copia a
   S2S1 con un ciclo de retardo. En q4 solo Q2 está en 1, y E = Q2.
-- **Generación:** la figura se genera con `figuras/generar_diagrama_tiempos.py`,
-  que simula las ecuaciones del diseño. Si el diseño cambia, se vuelve a
-  ejecutar el script.
